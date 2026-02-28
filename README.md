@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ItzFizz — Scroll-Driven Hero Section
+
+A premium scroll-driven hero section animation built with Next.js, GSAP, and Tailwind CSS. Features staggered load animations and a car image that responds fluidly to scroll progress.
+
+---
+
+## Features
+
+- Staggered headline letter animation on page load
+- Stats fade-in with sequential delay
+- Scroll-driven car animation tied to scroll progress via GSAP ScrollTrigger
+- GPU-accelerated transforms with no layout reflows on scroll
+- FOUC prevention via CSS opacity before JS initializes
+- SSR-safe GSAP initialization with `useLayoutEffect` guards
+- LCP optimized to 0.55s via image preload hint
+
+---
+
+## Tech Stack
+
+| Tool | Purpose |
+|---|---|
+| Next.js 16 (App Router) | Framework |
+| TypeScript | Type safety |
+| Tailwind CSS v4 | Styling |
+| GSAP + ScrollTrigger | Animations |
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm
+
+### Installation
 
 ```bash
+git clone https://github.com/Adinath-S-Pawar/itzfizz-hero.git
+cd itzfizz-hero
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+itzfizz-hero/
+├── app/
+│   ├── globals.css           # Tailwind imports + FOUC prevention styles
+│   ├── layout.tsx            # Root layout with image preload + scroll reset
+│   └── page.tsx              # Entry point
+├── components/
+│   ├── HeroSection.tsx       # Hero layout + load animations
+│   ├── ScrollAnimation.tsx   # Scroll-driven car animation wrapper
+│   └── ScrollReset.tsx       # Prevents scroll position retention on refresh
+└── public/
+    └── car.png               # McLaren 720S top-view asset
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
