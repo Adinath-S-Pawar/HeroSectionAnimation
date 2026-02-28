@@ -16,6 +16,7 @@ const ScrollAnimation = () => {
         if (typeof window === 'undefined') return;
 
         const ctx = gsap.context(() => {
+            gsap.set(carRef.current, { opacity: 1 });
             gsap.to(carRef.current, {
                 y: -300,
                 rotation: 15,

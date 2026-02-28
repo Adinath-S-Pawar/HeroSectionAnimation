@@ -103,7 +103,8 @@ const HeroSection = forwardRef<HTMLImageElement, React.HTMLAttributes<HTMLElemen
         ref={ref}
         src="/car.png"
         alt=""
-        className="absolute bottom-6 left-1/2 z-20 w-80 -translate-x-1/2 object-contain md:w-[420px] will-change-transform"
+        fetchPriority="high"
+        className="absolute bottom-6 left-1/2 z-20 w-80 -translate-x-1/2 object-contain md:w-[420px] will-change-transform opacity-0"
       />
     </section>
   );
