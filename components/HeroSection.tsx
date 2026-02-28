@@ -16,7 +16,7 @@ const HeroSection = forwardRef<HTMLImageElement, React.HTMLAttributes<HTMLElemen
         ))}
       </div>
       
-      <div className="z-10 flex flex-row items-start justify-between w-full max-w-6xl px-8 pb-32 md:px-12">
+      <div className="z-10 flex flex-row items-start justify-between w-full max-w-6xl px-8 pb-48 md:px-12">
         <div className="flex flex-col items-center text-center">
           <span className="mb-3 text-4xl font-bold text-white md:text-5xl">58%</span>
           <span className="max-w-[160px] text-sm leading-relaxed text-gray-400 md:text-base">
@@ -48,7 +48,7 @@ const HeroSection = forwardRef<HTMLImageElement, React.HTMLAttributes<HTMLElemen
         ref={ref}
         src="/car.png"
         alt=""
-        className="absolute bottom-10 left-1/2 z-20 w-64 -translate-x-1/2 object-contain md:bottom-16 md:w-96"
+        className="absolute bottom-6 left-1/2 z-20 w-80 -translate-x-1/2 object-contain md:w-[420px]"
       />
     </section>
   );
