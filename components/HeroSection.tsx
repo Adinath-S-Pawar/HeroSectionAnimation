@@ -60,7 +60,7 @@ const HeroSection = forwardRef<HTMLImageElement, React.HTMLAttributes<HTMLElemen
             ref={(el) => {
               if (el) lettersRef.current[index] = el;
             }}
-            className={`inline-block will-change-transform ${char === ' ' ? 'w-8 md:w-16' : ''}`}
+            className={`hero-letter inline-block will-change-transform ${char === ' ' ? 'w-8 md:w-16' : ''}`}
           >
             {char}
           </span>
@@ -70,25 +70,25 @@ const HeroSection = forwardRef<HTMLImageElement, React.HTMLAttributes<HTMLElemen
       <div className="z-10 w-full max-w-4xl mb-12 border-t border-white/10" />
 
       <div className="z-10 flex flex-row items-start justify-between w-full max-w-6xl px-8 pb-48 md:px-12">
-        <div ref={(el) => { if (el) statsRef.current[0] = el; }} className="flex flex-col items-start text-left border-l-2 border-white/20 pl-4">
+        <div ref={(el) => { if (el) statsRef.current[0] = el; }} className="hero-stat flex flex-col items-start text-left border-l-2 border-white/20 pl-4">
           <span className="mb-3 text-4xl font-bold text-white md:text-5xl">58%</span>
           <span className="max-w-[160px] text-sm leading-relaxed text-gray-400 md:text-base">
             Increase in pick up point use
           </span>
         </div>
-        <div ref={(el) => { if (el) statsRef.current[1] = el; }} className="flex flex-col items-start text-left border-l-2 border-white/20 pl-4">
+        <div ref={(el) => { if (el) statsRef.current[1] = el; }} className="hero-stat flex flex-col items-start text-left border-l-2 border-white/20 pl-4">
           <span className="mb-3 text-4xl font-bold text-white md:text-5xl">23%</span>
           <span className="max-w-[160px] text-sm leading-relaxed text-gray-400 md:text-base">
             Decreased in customer phone calls
           </span>
         </div>
-        <div ref={(el) => { if (el) statsRef.current[2] = el; }} className="flex flex-col items-start text-left border-l-2 border-white/20 pl-4">
+        <div ref={(el) => { if (el) statsRef.current[2] = el; }} className="hero-stat flex flex-col items-start text-left border-l-2 border-white/20 pl-4">
           <span className="mb-3 text-4xl font-bold text-white md:text-5xl">27%</span>
           <span className="max-w-[160px] text-sm leading-relaxed text-gray-400 md:text-base">
             Increase in pick up point use
           </span>
         </div>
-        <div ref={(el) => { if (el) statsRef.current[3] = el; }} className="flex flex-col items-start text-left border-l-2 border-white/20 pl-4">
+        <div ref={(el) => { if (el) statsRef.current[3] = el; }} className="hero-stat flex flex-col items-start text-left border-l-2 border-white/20 pl-4">
           <span className="mb-3 text-4xl font-bold text-white md:text-5xl">40%</span>
           <span className="max-w-[160px] text-sm leading-relaxed text-gray-400 md:text-base">
             Decreased in customer phone calls

@@ -1,2 +1,15 @@
 @import "tailwindcss";
+
 @source "../components";
+
+#car-image {
+  opacity: 0;
+}
+
+.hero-letter {
+  opacity: 0;
+}
+
+.hero-stat {
+  opacity: 0;
+}
