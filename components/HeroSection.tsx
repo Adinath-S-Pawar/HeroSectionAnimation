@@ -3,12 +3,23 @@
 import React, { forwardRef, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 
+/**
+ * A functional ForwardRef component that renders the primary hero portion of the landing page.
+ * Displays animated headlines and stat blocks using internal GSAP implementations,
+ * while forwarding the car image reference for external scroll-based trigger control.
+ */
 const HeroSection = forwardRef<HTMLImageElement, React.HTMLAttributes<HTMLElement>>((props, ref) => {
   const headline = 'WELCOME ITZFIZZ'.split('');
   const lettersRef = useRef<(HTMLSpanElement | null)[]>([]);
   const statsRef = useRef<(HTMLDivElement | null)[]>([]);
 
+  /**
+   * Initializes initial appearance and sequential load animations safely on the client.
+   * Leverages gsap.context for easy cleanup during strict mode unmounts or fast refreshes.
+   */
   useLayoutEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const ctx = gsap.context(() => {
       gsap.set(lettersRef.current, { opacity: 0 });
       gsap.set(statsRef.current, { opacity: 0 });
@@ -54,7 +65,7 @@ const HeroSection = forwardRef<HTMLImageElement, React.HTMLAttributes<HTMLElemen
             ref={(el) => {
               if (el) lettersRef.current[index] = el;
             }}
-            className={`inline-block ${char === ' ' ? 'w-8 md:w-16' : ''}`}
+            className={`inline-block will-change-transform ${char === ' ' ? 'w-8 md:w-16' : ''}`}
           >
             {char}
           </span>
@@ -93,7 +104,7 @@ const HeroSection = forwardRef<HTMLImageElement, React.HTMLAttributes<HTMLElemen
         ref={ref}
         src="/car.png"
         alt=""
-        className="absolute bottom-6 left-1/2 z-20 w-80 -translate-x-1/2 object-contain md:w-[420px]"
+        className="absolute bottom-6 left-1/2 z-20 w-80 -translate-x-1/2 object-contain md:w-[420px] will-change-transform"
       />
     </section>
   );
