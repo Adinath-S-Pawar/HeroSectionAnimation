@@ -12,6 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <link rel="preload" as="image" href="/car.png" />
+        <script dangerouslySetInnerHTML={{ __html: `window.scrollTo(0, 0); history.scrollRestoration = 'manual';` }} />
       </head>
       <body>
         <ScrollReset />
