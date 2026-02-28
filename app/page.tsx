@@ -1,9 +1,9 @@
-import HeroSection from "@/components/HeroSection";
+import ScrollAnimation from "@/components/ScrollAnimation";
 
 export default function Home() {
   return (
     <main>
-      <HeroSection />
+      <ScrollAnimation />
     </main>
   );
 }
